@@ -1,1 +1,28 @@
+internal class Program
+    {
+        static void Main(string[] args)
+        {
+            cvalue kmtome = new cvalue();
+            Console.WriteLine("Enter km value");
+            int km = int.Parse(Console.ReadLine());
 
+            int m= kmtome.kmtom( km);
+            Console.WriteLine("meter value is " + m);
+            Console.ReadLine();
+        }
+        
+    }
+
+
+
+{
+    internal class cvalue
+    {
+        public int kmtom(int km)
+        {
+         
+           int m =  km * 1000;
+            return m;
+        }
+    }
+}
