@@ -1,1 +1,56 @@
 
+public class ArrayOperations
+{
+    public static int FindMin(int[] arr)
+    {
+        int min = arr[0];
+        for (int i = 1; i < arr.Length; i++)
+        {
+            if (arr[i] < min)
+            {
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+
+    public static int FindMax(int[] arr)
+    {
+        int max = arr[0];
+        for (int i = 1; i < arr.Length; i++)
+        {
+            if (arr[i] > max)
+            {
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+
+
+
+
+
+
+    public static double FindAverage(int[] arr)
+    {
+        double sum = 0;
+        foreach (int num in arr)
+        {
+            sum += num;
+        }
+        return sum / arr.Length;
+    }
+
+    public static int[] ReverseArray(int[] arr)
+    {
+        int[] reversedArray = new int[arr.Length];
+        int j = arr.Length - 1;
+        for (int i = 0; i < arr.Length; i++)
+        {
+            reversedArray[j] = arr[i];
+            j--;
+        }
+        return reversedArray;
+    }
+}
