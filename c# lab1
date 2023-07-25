@@ -1,1 +1,36 @@
 
+internal class Program
+    {
+        static void Main(string[] args)
+        {
+            findvalues aandc = new findvalues();
+
+            Console.WriteLine("Enter raduis");
+            double r = double.Parse(Console.ReadLine());
+
+            double a = aandc.findarea(r);
+            double c = aandc.circumference(r);
+            Console.WriteLine("area of the circle is  " + c);
+            Console.WriteLine("circumference of the circle is " + c);
+            Console.ReadLine();
+
+
+        }
+    }
+
+
+
+    internal class findvalues
+    {
+        public double findarea(double r)
+        {
+            double a = (22 / 7) * r * r;
+            return a;
+        }
+        public double circumference(double r)
+        {
+            double c = 2 * (22 / 7) * r;
+            return c;
+
+        }
+    }
