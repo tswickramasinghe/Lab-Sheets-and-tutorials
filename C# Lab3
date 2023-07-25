@@ -1,1 +1,84 @@
+internal class Program
+    {
+        static void Main(string[] args)
+        {
+                calculate ssmd = new calculate();
+          
+         
+                Console.WriteLine("Enter 1 for addition");
+                Console.WriteLine("Enter 2 for subtraction");
+                Console.WriteLine("Enter 3 for multification");
+                Console.WriteLine("Enter 4 for divition");
 
+                Console.WriteLine("Enter your choice");
+                int choice = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Enter no1");
+                int no1 = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Enter no2");
+                int no2 = int.Parse(Console.ReadLine());
+
+            double result = 0;
+            
+
+            switch (choice)
+            {
+                case 1:
+                    result = calculate.sum(no1, no2);
+                 
+                    break;
+                case 2:
+                    result = calculate.sub(no1, no2);
+                   
+                    break;
+                case 3:
+                    result = calculate.multi(int no1, no2);
+                   
+                    break;
+                case 4:
+                    result = calculate.div(int no1,int no2);
+                    
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice.");
+                    break;
+            }
+
+            Console.WriteLine($"Answer is: {result} ");
+            Console.ReadLine();
+        }
+    }
+
+
+
+}
+    }
+}
+
+
+
+
+
+
+
+internal class calculate
+    {
+        public int sum(int n1, int n2)
+        {
+            return n1 + n2;
+        }
+        public int sub(int n1,int n2)
+        {
+            return n1 - n2;
+        }
+        public int multi(int n1,int n2)
+        {
+            return n1 * n2;
+        }
+        public int div(int n1,int n2)
+        {
+            return n1 / n2;
+        }
+    }
+}
