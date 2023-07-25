@@ -1,1 +1,42 @@
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter the size of the array: ");
+        int size = Convert.ToInt32(Console.ReadLine());
 
+        ArrayProcessor arrayProcessor = new ArrayProcessor();
+        int[] processedArray = arrayProcessor.CreateArrayWithZeros(size);
+
+       
+        Console.WriteLine("\nProcessed Array with Values and Zeros:");
+        for (int i = 0; i < processedArray.Length; i++)
+        {
+            Console.Write(processedArray[i] + " ");
+        }
+
+       
+        Console.ReadKey();
+    }
+}
+
+
+
+class ArrayProcessor
+{
+    public int[] CreateArrayWithZeros(int size)
+    {
+        int[] array = new int[size * 2];
+
+        for (int i = 0; i < size; i++)
+        {
+            Console.Write($"Enter a value for index {i}: ");
+            int userInput = Convert.ToInt32(Console.ReadLine());
+
+            array[i * 2] = userInput; 
+            array[i * 2 + 1] = 0;
+        }
+
+        return array;
+    }
+}
